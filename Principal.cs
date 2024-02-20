@@ -15,6 +15,11 @@ void Main()
         Panier panier1 = new Panier();
         panier1.ajoutPanier(ordinateur);
         panier1.afficherPanier();
+        
+        Banane banane1;
+        banane1 = new Banane("BananeMiam",11,tva,21,5);
+        
+        Console.WriteLine(banane1.calculTTCauPoids());
     }
 
 Main();
