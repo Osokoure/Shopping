@@ -3,17 +3,12 @@ public class Banane:Produit
     private double prixKgHT;
     private double poids;
 
-    public Banane(string nomDefaut,double prixDefaut,Tva tvaProduit,double prixAuKiloHorsTaxes,double lePoids)
-    : base(nomDefaut,prixDefaut,tvaProduit)
+    public Banane(string nomDefaut,Tva tvaProduit,double prixAuKiloHorsTaxes,double lePoids)
+    : base(nomDefaut,prixAuKiloHorsTaxes*lePoids,tvaProduit)
 
     {
         prixKgHT = prixAuKiloHorsTaxes;
         poids = lePoids;
-    }
-
-    public double calculTTCauPoids()
-    {
-        return this.calculTTC()*this.getPoids();        
     }
     
     public double getPrixKgHT()

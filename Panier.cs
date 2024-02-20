@@ -18,12 +18,25 @@ public class Panier
     {
         for (int k = 0; k < tabPanier.Length; k++)
         {
+            Console.WriteLine(tabPanier[k]);
             if (tabPanier[k] == null)
             {
                 tabPanier[k] = ordinateur;
                 break; 
             }
         }
+    }
+
+    public double sommePanier()
+    {
+        double somme=0;
+        foreach(var i in tabPanier)
+        {
+            if (i!=null){
+            somme+=i.calculTTC();
+            }
+        } 
+        return somme;
     }
 
 }

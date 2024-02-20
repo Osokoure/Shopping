@@ -17,9 +17,11 @@ void Main()
         panier1.afficherPanier();
         
         Banane banane1;
-        banane1 = new Banane("BananeMiam",11,tva,21,5);
+        banane1 = new Banane("BananeMiam",tva,21,5);
+        panier1.ajoutPanier(banane1);
         
-        Console.WriteLine(banane1.calculTTCauPoids());
+        Console.WriteLine(banane1.calculTTC());
+        Console.WriteLine(panier1.sommePanier());
     }
 
 Main();
